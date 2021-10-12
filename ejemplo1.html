@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registro de usuarios</title>
+	<script type="text/javascript">
+		function validar_usuario(){
+			usu=document.form1.txtUsuario.value
+			pass=document.form1.txtPass.value
+			if(usu=="miguel"){
+				if(pass=="javascript"){
+					alert('Bienvenido: '+usu)
+					location='http://www.gmail.com'
+				}else{
+					alert(usu + " Tu clave esta errada")
+					document.form1.txtPass.focus()
+					document.form1.txtPass.select()
+				}
+			}else{
+				alert('Ud. no esta registrado')
+				document.form1.txtUsuario.focus()
+				document.form1.txtUsuario.select()
+			}
+		}
+	</script>
+</head>
+<body>
+	<form name="form1">
+		<table>
+			<tr>
+				<td>Usuario</td>
+				<td><input type="text" name="txtUsuario" value=""></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="password" name="txtPass" value=""></td>
+			</tr>
+			<tr>
+				<td><input type="button" name="" value="Aceptar" onclick="validar_usuario()"></td>
+				<td><input type="reset" name="" value="Limpiar"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
